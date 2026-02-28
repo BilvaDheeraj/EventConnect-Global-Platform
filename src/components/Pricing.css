@@ -1,0 +1,199 @@
+.pricing-section {
+    background: radial-gradient(ellipse at 50% 30%, rgba(124, 58, 237, 0.07) 0%, transparent 60%);
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    width: fit-content;
+    margin: 0 auto 52px;
+}
+
+.billing-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    cursor: pointer;
+    background: none;
+}
+
+.billing-btn.active {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 2px 20px rgba(124, 58, 237, 0.4);
+}
+
+.save-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--emerald);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-full);
+    padding: 2px 8px;
+}
+
+/* Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 28px;
+}
+
+.pricing-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pricing-icon {
+    font-size: 1.6rem;
+}
+
+.pricing-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+}
+
+.pricing-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.pricing-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.pricing-price {
+    font-size: 2.4rem;
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.pricing-price.custom {
+    font-size: 1.8rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-per {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.plan-savings {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--emerald);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-full);
+    padding: 3px 8px;
+}
+
+.btn-pricing {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.pricing-features {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ticketing Note */
+.ticketing-note {
+    margin-top: 36px;
+    background: rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 20px 28px;
+}
+
+.ticketing-note-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ticketing-note-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.ticketing-note-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.ticketing-note-desc strong {
+    color: var(--accent);
+}
+
+/* Enterprise */
+.enterprise-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 20px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.enterprise-cta strong {
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,355 @@
+.how-section {
+    background: radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+.how-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.how-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.how-step.reverse {
+    direction: rtl;
+}
+
+.how-step.reverse>* {
+    direction: ltr;
+}
+
+.how-step-content {
+    position: relative;
+}
+
+.how-step-num {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.06);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    user-select: none;
+}
+
+.how-step-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: rgba(var(--accent-rgb, 124, 58, 237), 0.15);
+    border: 1px solid rgba(var(--accent-rgb, 124, 58, 237), 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent, var(--primary-light));
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.how-step-subtitle {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.how-step-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.1;
+}
+
+.how-step-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 440px;
+}
+
+.how-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Visual Side */
+.how-step-visual {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-visual-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+}
+
+/* Step Visual 1 - Customize */
+.step-visual-1 {
+    width: 100%;
+    padding: 24px;
+}
+
+.sv-window {
+    background: rgba(10, 15, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.sv-header {
+    display: flex;
+    gap: 6px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border);
+}
+
+.sv-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.sv-dot.red {
+    background: #FF5F57;
+}
+
+.sv-dot.yellow {
+    background: #FFBD2E;
+}
+
+.sv-dot.green {
+    background: #28C840;
+}
+
+.sv-preview {
+    padding: 16px;
+}
+
+.sv-event-banner {
+    position: relative;
+    height: 120px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.sv-event-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 50%, #1E1B4B 100%);
+}
+
+.sv-event-text {
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+}
+
+.sv-event-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+}
+
+.sv-event-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    margin: 8px 0 4px;
+}
+
+.sv-event-date {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sv-palette {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.sv-color-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.sv-color-dot:hover {
+    transform: scale(1.2);
+}
+
+/* Step Visual 2 - Control */
+.step-visual-2 {
+    width: 100%;
+    padding: 24px;
+}
+
+.sv-form-preview {
+    background: rgba(10, 15, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+}
+
+.sv-form-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sv-form-field {
+    margin-bottom: 12px;
+}
+
+.sv-field-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+}
+
+.sv-field-input {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.sv-form-btn {
+    padding: 10px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* Step Visual 3 - Automate */
+.step-visual-3 {
+    width: 100%;
+    padding: 24px;
+}
+
+.sv-automation {
+    background: rgba(10, 15, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sv-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    position: relative;
+    transition: var(--transition);
+}
+
+.sv-step:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.sv-step-done {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.sv-step-icon {
+    font-size: 1.2rem;
+    width: 28px;
+    text-align: center;
+}
+
+.sv-step-info {
+    flex: 1;
+}
+
+.sv-step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sv-step-time {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.sv-step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    border: 2px solid transparent;
+    flex-shrink: 0;
+}
+
+.sv-step-dot.done {
+    background: var(--emerald);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .how-step,
+    .how-step.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+
+    .how-steps {
+        gap: 60px;
+    }
+}
