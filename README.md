@@ -1,4 +1,4 @@
-# EventConnect (event-pbl)
+# EventConnect 
 
 ![EventConnect](https://via.placeholder.com/1200x400?text=EventConnect+-+Event+Management+Platform)
 
